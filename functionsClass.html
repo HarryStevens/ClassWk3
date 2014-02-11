@@ -3,23 +3,30 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style>
+			body {font-family:Tahoma};
+		</style>
 		<title>Class Wk. 3</title>
 	</head>
 	<body>
 		<h1>My Favorite Cookies</h1>
-		<p>Here's some text!</p>
+		<div style="margin-bottom:15px">We're gonna sort some cookies in class.</div>
+		<div>The purpose of this program is to create a list of cookies with specific properties,<br />
+			and from that list create two new lists, one of my favorites and one of the rest.</div>
 		
 		<script>
-			var cookieList = [
-				{"type":"chocChip"},
-				{"type":"mint"},
-				{"type":"sugar"},
-				{"type":"chocChip"},
-				{"type":"oatmeanRaisin"}			
+			/*
+			 * The purpose of this program is to create a list of cookies with specific properties, 
+			 * and from that list create two new lists, one of my favorites and one of the rest.
+			 */
+			var myCookies = [
+				{"name":"Oreo","shape":"round"},
+				{"name":"Chips Ahoy","shape":"round"},
+				{"name":"Fig Newtons","shape":"square"},
+				{"name":"Lorna Doone","shape":"square"}
 			];
-			console.log(cookieList);
-			console.log(cookieList.type);
 			
+			console.log(myCookies);
 		</script>
 		
 	</body>
