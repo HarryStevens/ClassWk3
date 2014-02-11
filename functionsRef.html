@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Functions</title>
+	</head>
+	<body>
+		<h1>Functions practice</h1>
+		<p>Practicing functions!</p>
+		<p>Right click, select inspect element, and click the Console tab</p>
+		<script>
+			/*
+			 * The purpose of this program is to select all the chocolate chip
+			 * cookies (type="chocChip") from a list of cookie objects and put
+			 * them in their own list. The remaining cookies should also be put 
+			 * in their own list.
+			*/
+
+
+		var someCookies = [
+			{"type":"chocChip"},
+			{"type":"oatmealRaisin"},
+			{"type":"chocChocChip"},
+			{"type":"linzer"},
+			{"type":"chocChip"},
+		];
+		var moreCookies = [
+			{"type":"chocChip"},
+			{"type":"oatmealRaisin"},
+			{"type":"mint"},
+			{"type":"chocChip"},
+		];
+		
+		
+		/*
+		 * A function is a "recipe" with the arguments (inside the round parens)
+		 * as "ingredients."
+		 */
+		function sortCookies(cookieList){
+			
+			//Lists to add our cookies to as we test to see if they are chocChip
+			var selectedCookies = [];
+			var leftoverCookies = [];
+			
+			/* 
+			 * Create a loop that steps through the cookieList one item at a time
+			 * and then test each item to see if its type is "chocChip"
+			 */
+			
+			/*
+			 * For every cookie in our list, look at its "type" property, and if
+			 * that property has the value "chocChip", add it to our selectedCookies
+			 * list; otherwise, add it to our leftoverCookies list.
+			 */
+			 
+			 /*
+			  * To make our for loop, we need a "counter" that starts at 0 and
+			  * goes until the end of the list.
+			  * 
+			  * Start our counter at 0, and make sure to stop it while it's still
+			  * less than the total length of the list.
+			  * 
+			  * Every time the loop goes through, add 1 to our counter.
+			  */
+			 
+			 /*
+			  * Lists have a built-in function for measuring their own length.
+			  */
+			 for(var i=0; i<cookieList.length; i++){
+			 	var currentCookie = cookieList[i];
+			 				 	
+			 	/*
+			 	 * Our conditional says if "type" is "chocChop" add this object to
+			 	 * to selectedCookies, otherwise add it to leftoverCookies.
+			 	 * 
+			 	 * The == is equivalent to "is the same as"
+			 	 */
+			 	
+			 	if(currentCookie.type == "chocChip"){
+			 		selectedCookies.push(currentCookie);
+			 	}else{
+			 		leftoverCookies.push(currentCookie);
+			 	}//End of conditional
+			 	
+			 	
+			}//End of for loop
+			 
+			 console.log(selectedCookies);
+			 console.log(leftoverCookies);
+			 
+		}//End of sortCookies function
+		
+		console.log("first list");
+		//Actually execute the sortCookies function
+		sortCookies(someCookies);
+		
+		console.log("second list");
+		//Run that function again w/ a different list of cookies
+		sortCookies(moreCookies);
+		</script>
+	</body>
+</html>
+
