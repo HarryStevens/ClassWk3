@@ -8,16 +8,16 @@
 		</style>
 		<title>Class Wk. 3</title>
 	</head>
-	<body>
-		<h1>My Favorite Cookies</h1>
+	<body style="width:500px">
+		<h1 style="text-align:center">My Favorite Cookies</h1>
 		<div style="margin-bottom:15px">We're gonna sort some cookies in class. 'Inspect element' / 'Console' to check it.</div>
 		<div><strong>PURPOSE</strong></div>
-		<div style="margin-bottom:15px">The purpose of this program is to create a list of cookies with specific properties,<br />
+		<div style="margin-bottom:15px">The purpose of this program is to create a list of cookies with specific properties,
 			and from that list create two <em>new</em> lists, one of my favorites and one of the rest.</div>
 		<div><strong>STEPS</strong></div>
 		<div style="margin-bottom:15px">1.) I'll create a list of four cookies with properties "name" and "shape."</div>
 		<div style="margin-bottom:15px">2.) I'm going to create two empty lists, one called myFaves and one called theRest.</div>
-		<div style="margin-bottom:15px">3.) I'm going to create this process: For every cookie in my list, check its shape.<br />
+		<div style="margin-bottom:15px">3.) I'm going to create this process: For every cookie in my list, check its shape.
 			If square, add to myFaves; otherwise, add to theRest.</div>
 		
 		<script>
@@ -48,10 +48,14 @@
 			 */
 			for(var i=0; i<4; i++){
 				var currentCookie = myCookies[i];
-				console.log("Cookie",i+1);
-				console.log(currentCookie);
-			}
-
+				if(currentCookie.shape == "square"){
+					myFaves.push(currentCookie);
+				}else{
+					theRest.push(currentCookie);
+				}//end if
+			}//end for
+			console.log("My favorite cookies:",myFaves);
+			console.log("The other cookies:",theRest);
 		</script>
 		
 	</body>
